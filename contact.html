@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Ceramichub</title>
+    <link rel="icon" href="./images/favicon.png" type="image/x-icon">
+    <!-- AOS Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- Leaflet CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Link To CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <!-- Header Section -->
+    <header id="navbar">
+        <!-- Navbar content will be injected here by JavaScript -->
+    </header>
+
+    <!-- Hero Section -->
+    <div class="contact-container">
+        <main class="contact-header">
+            <h1 class="contact-title">Get In Touch</h1>
+            <p class="contact-subtitle">We welcome your queries and feedback. Reach out to us through the methods below.
+            </p>
+        </main>
+
+        <!-- Contact Sction -->
+        <div class="contact-content">
+            <div class="contact-info">
+                <div class="contact-info-card" data-aos="fade-up" data-aos-duration="1200">
+                    <i class="fas fa-map-marker-alt contact-icon"></i>
+                    <h3 class="contact-info-title">Our Location</h3>
+                    <p class="contact-info-text">Tariq Road<br> Karachi, Sindh 75400</p>
+                </div>
+
+                <div class="contact-info-card" data-aos="fade-up" data-aos-duration="1200">
+                    <i class="fas fa-envelope contact-icon"></i>
+                    <h3 class="contact-info-title">Email Us</h3>
+                    <p class="contact-info-text">
+                        <a href="mailto:info@ceramichub.com" class="contact-email-link">info@ceramichub.com</a>
+                    </p>
+                </div>
+
+                <div class="contact-info-card" data-aos="fade-up" data-aos-duration="1200">
+                    <i class="fas fa-phone-alt contact-icon"></i>
+                    <h3 class="contact-info-title">Call Us</h3>
+                    <p class="contact-info-text">+92 332 2329680</p>
+                </div>
+
+                <div class="contact-info-card" data-aos="fade-up" data-aos-duration="1200">
+                    <i class="fas fa-clock contact-icon"></i>
+                    <h3 class="contact-info-title">Working Hours</h3>
+                    <p class="contact-info-text">Monday - Friday: 9AM - 5PM<br>Saturday: 10AM - 2PM</p>
+                </div>
+            </div>
+
+            <!-- Contact Form -->
+            <div class="contact-form-map-container" data-aos="zoom-in" data-aos-duration="1200">
+                <form class="contact-form" id="contactForm">
+                    <h2 class="contact-form-title">Send Us a Message</h2>
+                    <div class="contact-form-group">
+                        <input type="text" id="name" class="contact-input" placeholder="Your Name"
+                            pattern="[a-zA-Z ]{3,16}" required>
+                    </div>
+                    <div class="contact-form-group">
+                        <input type="email" id="email" class="contact-input" placeholder="Your Email" required>
+                    </div>
+                    <div class="contact-form-group">
+                        <input type="text" id="subject" class="contact-input" placeholder="Subject"
+                            pattern="[a-zA-Z]{3,35}" required>
+                    </div>
+                    <div class="contact-form-group">
+                        <textarea id="message" class="contact-textarea" placeholder="Your Message" rows="5"
+                            required></textarea>
+                    </div>
+                    <button type="submit" class="contact-submit-btn">Send Message</button>
+                </form>
+
+                <!-- Geo Location Api -->
+                <div class="contact-map-container" data-aos="zoom-in" data-aos-duration="1200">
+                    <h2 class="contact-map-title">Find us on the map</h2>
+                    <div id="contactMap" class="contact-map"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer Section -->
+    <footer id="footer">
+        <!-- Dynamically injected Footer using JavaScript -->
+    </footer>
+
+    <!-- AOS Library -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <!-- Font Awesome Icons -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/js/all.min.js"
+        integrity="sha512-b+nQTCdtTBIRIbraqNEwsjB6UvL3UEMkXnhzd8awtCYh0Kcsjl9uEgwVFVbhoj3uu1DO1ZMacNvLoyJJiNfcvg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <!-- Leaflet JS -->
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+    <!-- Link To JS -->
+    <script src="js/navbar.js"></script>
+    <script src="js/footer.js"></script>
+    <script src="js/contact.js"></script>
+    <script src="js/script.js"></script>
+</body>
+
+</html>

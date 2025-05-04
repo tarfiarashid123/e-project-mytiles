@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tile Catalogue- Ceramichub</title>
+    <link rel="icon" href="./images/favicon.png" type="image/x-icon">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- Link To CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/catalogue.css">
+</head>
+
+<body>
+
+    <!-- Header Section -->
+    <header id="navbar">
+        <!-- Dynamically injected Navbar using JavaScript -->
+    </header>
+
+    <!-- Hero Section -->
+    <div class="container">
+        <div class="product-detail">
+            <div class="product-gallery">
+                <img src="./images/catalogue_img1.avif"
+                    alt="Premium Ceramic Tiles" class="main-image" id="mainImage">
+                <div class="thumbnail-container">
+                    <img src="./images/catalogue_img1.avif"
+                        alt="Tile thumbnail 1" class="thumbnail active" onclick="changeProduct(this, 0)">
+                    <img src="./images/catalogue_img3.avif"
+                        alt="Tile thumbnail 2" class="thumbnail" onclick="changeProduct(this, 1)">
+                    <img src="./images/catalogue_img4.avif"
+                        alt="Tile thumbnail 3" class="thumbnail" onclick="changeProduct(this, 2)">
+                    <img src="./images/catalogue_img2.avif"
+                        alt="Tile thumbnail 4" class="thumbnail" onclick="changeProduct(this, 3)">
+                </div>
+            </div>
+
+            <div class="product-info">
+                <h1 class="product-title" id="productTitle">Premium Ceramic Tiles - Marble Effect</h1>
+                <p class="product-code" id="productCode">Product Code: TM-CER-2023</p>
+                <p class="product-price" id="productPrice">$12.99 / sq. ft.</p>
+
+                <p class="product-description" id="productDescription">
+                    Our premium ceramic tiles with marble effect bring elegance and sophistication to any space.
+                    These tiles combine the timeless beauty of natural marble with the durability and easy maintenance
+                    of ceramic.
+                </p>
+
+                <div class="features-summary">
+                    <h3>Key Features:</h3>
+                    <ul id="productFeatures">
+                        <li>High-quality ceramic construction for durability</li>
+                        <li>Realistic marble appearance with natural veining</li>
+                        <li>Stain and scratch resistant surface</li>
+                        <li>Low water absorption rate (≤ 0.5%)</li>
+                        <li>Slip-resistant finish (R10 rating)</li>
+                        <li>Available in multiple sizes (12x12, 12x24, 24x24 inches)</li>
+                        <li>10-year residential warranty</li>
+                    </ul>
+                </div>
+
+                <div class="download-section">
+                    <h3>Detailed Specifications</h3>
+                    <p>For complete technical specifications, installation guidelines, and maintenance instructions,
+                        download our product documentation:</p>
+                    <button id="viewSpecsBtn" class="download-btn"
+                        style="margin-left: 10px; background-color: var(--success-color);">
+                        <i class="fas fa-eye"></i> View Online
+                    </button>
+                </div>
+
+                <div class="catalogue-section">
+                    <h2>Complete Tile Range E-Catalogue</h2>
+                    <p>Download our comprehensive e-catalogue featuring the complete range of TileMaster products
+                        including:</p>
+                    <ul style="margin: 10px 0 15px 20px;">
+                        <li>Glazed Vitrified Tiles - 50+ designs</li>
+                        <li>Ceramic Tiles - 30+ collections</li>
+                        <li>Polished Vitrified Tiles - 40+ finishes</li>
+                        <li>Digital Wall Tiles - 20+ patterns</li>
+                        <li>Outdoor & Porcelain Tiles - Weather-resistant options</li>
+                    </ul>
+                    <p>The e-catalogue includes high-resolution images, technical specifications, size options, and
+                        design inspirations for all our products.</p>
+                    <a href="./Tile_E-Catalogue.docx" class="download-btn btn-catalogue" download>
+                        <i class="fas fa-book"></i> Download Full E-Catalogue (DOCX)
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Specifications Modal -->
+    <div class="spec-modal" id="specModal">
+        <div class="modal-content">
+            <span class="close-modal" id="closeModal">&times;</span>
+            <h2 id="modalTitle">Premium Ceramic Tiles - Detailed Specifications</h2>
+
+            <h3>Technical Specifications</h3>
+            <table style="width: 100%; border-collapse: collapse; margin: 15px 0;">
+                <tr style="background-color: #f2f2f2;">
+                    <td style="padding: 10px; border: 1px solid #ddd; font-weight: bold;">Material</td>
+                    <td style="padding: 10px; border: 1px solid #ddd;" id="specMaterial">Premium Ceramic</td>
+                </tr>
+                <tr>
+                    <td style="padding: 10px; border: 1px solid #ddd; font-weight: bold;">Surface Finish</td>
+                    <td style="padding: 10px; border: 1px solid #ddd;" id="specFinish">Polished with anti-slip treatment
+                    </td>
+                </tr>
+                <tr style="background-color: #f2f2f2;">
+                    <td style="padding: 10px; border: 1px solid #ddd; font-weight: bold;">Water Absorption</td>
+                    <td style="padding: 10px; border: 1px solid #ddd;" id="specWaterAbsorption">≤ 0.5% (EN ISO 10545-3)
+                    </td>
+                </tr>
+                <tr>
+                    <td style="padding: 10px; border: 1px solid #ddd; font-weight: bold;">Slip Resistance</td>
+                    <td style="padding: 10px; border: 1px solid #ddd;" id="specSlipResistance">R10 (DIN 51130)</td>
+                </tr>
+                <tr style="background-color: #f2f2f2;">
+                    <td style="padding: 10px; border: 1px solid #ddd; font-weight: bold;">PEI Rating</td>
+                    <td style="padding: 10px; border: 1px solid #ddd;" id="specPeiRating">Class IV (Heavy
+                        Residential/Commercial)</td>
+                </tr>
+                <tr>
+                    <td style="padding: 10px; border: 1px solid #ddd; font-weight: bold;">Frost Resistance</td>
+                    <td style="padding: 10px; border: 1px solid #ddd;" id="specFrostResistance">Yes (EN ISO 10545-12)
+                    </td>
+                </tr>
+                <tr style="background-color: #f2f2f2;">
+                    <td style="padding: 10px; border: 1px solid #ddd; font-weight: bold;">Chemical Resistance</td>
+                    <td style="padding: 10px; border: 1px solid #ddd;" id="specChemicalResistance">Resistant to acids
+                        and alkalis (EN ISO 10545-13)</td>
+                </tr>
+                <tr>
+                    <td style="padding: 10px; border: 1px solid #ddd; font-weight: bold;">Thickness</td>
+                    <td style="padding: 10px; border: 1px solid #ddd;" id="specThickness">9.5mm (±0.5mm)</td>
+                </tr>
+                <tr style="background-color: #f2f2f2;">
+                    <td style="padding: 10px; border: 1px solid #ddd; font-weight: bold;">Warranty</td>
+                    <td style="padding: 10px; border: 1px solid #ddd;" id="specWarranty">10 years residential, 5 years
+                        commercial</td>
+                </tr>
+            </table>
+
+            <h3>Available Sizes and Colors</h3>
+            <ul style="margin: 15px 0; padding-left: 20px;" id="specSizes">
+                <li>12" x 12" - Carrara White, Statuario, Nero Marquina</li>
+                <li>12" x 24" - Carrara White, Statuario, Calacatta Gold</li>
+                <li>24" x 24" - All color variants</li>
+            </ul>
+
+            <h3>Installation Guidelines</h3>
+            <p style="margin: 10px 0;">For best results, follow these installation guidelines:</p>
+            <ol style="margin: 10px 0; padding-left: 20px;" id="specInstallation">
+                <li>Ensure substrate is clean, dry, and level (max. deviation 3mm over 2m)</li>
+                <li>Use high-quality thin-set mortar suitable for ceramic tiles</li>
+                <li>Maintain joint width of 3-5mm for proper grouting</li>
+                <li>Allow adhesive to cure for 24 hours before grouting</li>
+                <li>Use flexible grout for areas subject to movement</li>
+            </ol>
+
+            <h3>Maintenance</h3>
+            <p style="margin: 10px 0;">To maintain the beauty of your tiles:</p>
+            <ul style="margin: 10px 0; padding-left: 20px;" id="specMaintenance">
+                <li>Clean regularly with pH-neutral cleaner</li>
+                <li>Avoid abrasive cleaners or steel wool</li>
+                <li>Wipe up spills promptly, especially acidic substances</li>
+                <li>For polished finish, periodically apply tile sealer</li>
+            </ul>
+
+            <p style="margin-top: 20px; font-style: italic;">
+                Note: For complete documentation, please download the Word documents above.
+            </p>
+        </div>
+    </div>
+
+    <!-- Catalogue Preview Modal -->
+    <div class="spec-modal" id="catalogueModal">
+        <div class="modal-content" style="max-width: 900px;">
+            <span class="close-modal" id="closeCatalogueModal">&times;</span>
+            <h2>TileMaster Product Catalogue 2023</h2>
+
+            <div style="display: flex; justify-content: space-between; margin: 20px 0;">
+                <a href="catalogue/TileMaster-Product-Catalogue-2023.docx" class="download-btn" download>
+                    <i class="fas fa-download"></i> Download Full Catalogue
+                </a>
+                <p style="color: #777;">Page 1 of 5 (Preview)</p>
+            </div>
+
+            <div style="border: 1px solid #ddd; padding: 20px; background: white; margin-bottom: 20px;">
+                <h3
+                    style="color: var(--primary-color); border-bottom: 1px solid #eee; padding-bottom: 10px; margin-bottom: 15px;">
+                    Table of Contents</h3>
+                <ul style="columns: 2; list-style-type: none;">
+                    <li style="margin-bottom: 8px;"><i class="fas fa-chevron-right"
+                            style="color: var(--secondary-color); margin-right: 5px;"></i> Glazed Vitrified Tiles (pg.
+                        3-12)</li>
+                    <li style="margin-bottom: 8px;"><i class="fas fa-chevron-right"
+                            style="color: var(--secondary-color); margin-right: 5px;"></i> Ceramic Tiles (pg. 13-22)
+                    </li>
+                    <li style="margin-bottom: 8px;"><i class="fas fa-chevron-right"
+                            style="color: var(--secondary-color); margin-right: 5px;"></i> Polished Vitrified Tiles (pg.
+                        23-32)</li>
+                    <li style="margin-bottom: 8px;"><i class="fas fa-chevron-right"
+                            style="color: var(--secondary-color); margin-right: 5px;"></i> Digital Wall Tiles (pg.
+                        33-38)</li>
+                    <li style="margin-bottom: 8px;"><i class="fas fa-chevron-right"
+                            style="color: var(--secondary-color); margin-right: 5px;"></i> Outdoor & Porcelain Tiles
+                        (pg. 39-45)</li>
+                    <li style="margin-bottom: 8px;"><i class="fas fa-chevron-right"
+                            style="color: var(--secondary-color); margin-right: 5px;"></i> Technical Specifications (pg.
+                        46-52)</li>
+                    <li style="margin-bottom: 8px;"><i class="fas fa-chevron-right"
+                            style="color: var(--secondary-color); margin-right: 5px;"></i> Installation Guides (pg.
+                        53-58)</li>
+                    <li style="margin-bottom: 8px;"><i class="fas fa-chevron-right"
+                            style="color: var(--secondary-color); margin-right: 5px;"></i> Design Inspiration (pg.
+                        59-64)</li>
+                </ul>
+            </div>
+
+            <h3 style="color: var(--primary-color); margin: 25px 0 15px 0;">Featured Product Ranges</h3>
+
+            <div style="display: flex; flex-wrap: wrap; gap: 20px; margin-bottom: 30px;">
+                <div style="flex: 1; min-width: 250px; border: 1px solid #eee; padding: 15px; border-radius: 4px;">
+                    <h4 style="color: var(--secondary-color); margin-bottom: 10px;">Glazed Vitrified Tiles</h4>
+                    <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80"
+                        alt="Glazed Vitrified Tiles"
+                        style="width: 100%; height: 150px; object-fit: cover; margin-bottom: 10px;">
+                    <ul style="font-size: 14px; padding-left: 20px;">
+                        <li>50+ contemporary designs</li>
+                        <li>Scratch and stain resistant</li>
+                        <li>Available in matte and glossy finishes</li>
+                        <li>Ideal for high-traffic areas</li>
+                    </ul>
+                </div>
+
+                <div style="flex: 1; min-width: 250px; border: 1px solid #eee; padding: 15px; border-radius: 4px;">
+                    <h4 style="color: var(--secondary-color); margin-bottom: 10px;">Ceramic Tiles</h4>
+                    <img src="https://images.unsplash.com/photo-1600566752220-440e171a7f81?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80"
+                        alt="Ceramic Tiles" style="width: 100%; height: 150px; object-fit: cover; margin-bottom: 10px;">
+                    <ul style="font-size: 14px; padding-left: 20px;">
+                        <li>30+ elegant collections</li>
+                        <li>Natural stone and wood effects</li>
+                        <li>Budget-friendly options</li>
+                        <li>Perfect for walls and floors</li>
+                    </ul>
+                </div>
+
+                <div style="flex: 1; min-width: 250px; border: 1px solid #eee; padding: 15px; border-radius: 4px;">
+                    <h4 style="color: var(--secondary-color); margin-bottom: 10px;">Polished Vitrified Tiles</h4>
+                    <img src="https://images.unsplash.com/photo-1600566752355-35792bedcfea?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80"
+                        alt="Polished Vitrified Tiles"
+                        style="width: 100%; height: 150px; object-fit: cover; margin-bottom: 10px;">
+                    <ul style="font-size: 14px; padding-left: 20px;">
+                        <li>40+ premium finishes</li>
+                        <li>High-gloss marble effect</li>
+                        <li>Extremely durable</li>
+                        <li>Luxury commercial grade</li>
+                    </ul>
+                </div>
+            </div>
+
+            <p style="font-style: italic; text-align: center; margin-top: 20px;">
+                This is a preview of our full catalogue. Download to view complete product ranges with detailed
+                specifications, pricing, and design ideas.
+            </p>
+        </div>
+    </div>
+
+    <!-- Footer Section -->
+    <footer id="footer">
+
+    </footer>
+
+    <!-- Font Awesome Icons -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/js/all.min.js"
+        integrity="sha512-b+nQTCdtTBIRIbraqNEwsjB6UvL3UEMkXnhzd8awtCYh0Kcsjl9uEgwVFVbhoj3uu1DO1ZMacNvLoyJJiNfcvg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <!-- Link To JS -->
+    <script src="js/navbar.js"></script>
+    <script src="js/footer.js"></script>
+    <script src="js/catalogue.js"></script>
+</body>
+
+</html>

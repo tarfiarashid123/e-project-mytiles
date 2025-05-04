@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tile Comparison | CeramicHub</title>
+    <link rel="icon" href="./images/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <!-- Link To CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <!-- Header Section -->
+    <header id="navbar">
+        <!-- Navbar content will be injected here by JavaScript -->
+    </header>
+
+    <!-- Hero Section -->
+    <div class="tile-comparison">
+        <h1 class="comparison-title">Compare Tiles</h1>
+
+        <div class="comparison-container">
+            <div class="comparison-alert">
+                <span class="alert-icon">ℹ</span> Select two different tiles to compare their specifications
+            </div>
+
+            <div class="comparison-table">
+                <div class="comparison-row header">
+                    <div class="comparison-category">Selection</div>
+                    <div class="comparison-item">
+                        <select class="tile-select" id="select1" onchange="item1(this.value)">
+                            <option value="0">-- Select Tile --</option>
+                        </select>
+                    </div>
+                    <div class="comparison-item">
+                        <select class="tile-select" id="select2" onchange="item2(this.value)">
+                            <option value="0">-- Select Tile --</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="comparison-row">
+                    <div class="comparison-category">Tile Image</div>
+                    <div class="comparison-item">
+                        <img src="./images/no_image.png" id="img1" class="comparison-img" alt="Tile 1">
+                    </div>
+                    <div class="comparison-item">
+                        <img src="./images/no_image.png" id="img2" class="comparison-img" alt="Tile 2">
+                    </div>
+                </div>
+
+                <div class="comparison-row">
+                    <div class="comparison-category"><span class="spec-icon">💰</span>Price</div>
+                    <div class="comparison-item" id="price1">--</div>
+                    <div class="comparison-item" id="price2">--</div>
+                </div>
+
+                <div class="comparison-row">
+                    <div class="comparison-category"><span class="spec-icon">📝</span>Description</div>
+                    <div class="comparison-item" id="desc1">--</div>
+                    <div class="comparison-item" id="desc2">--</div>
+                </div>
+
+                <div class="comparison-row">
+                    <div class="comparison-category"><span class="spec-icon">🏭</span>Brand</div>
+                    <div class="comparison-item" id="brand1">--</div>
+                    <div class="comparison-item" id="brand2">--</div>
+                </div>
+
+                <div class="comparison-row">
+                    <div class="comparison-category"><span class="spec-icon">📏</span>Size</div>
+                    <div class="comparison-item" id="size1">--</div>
+                    <div class="comparison-item" id="size2">--</div>
+                </div>
+
+                <div class="comparison-row">
+                    <div class="comparison-category"><span class="spec-icon">⬛</span>Thickness</div>
+                    <div class="comparison-item" id="thickness1">--</div>
+                    <div class="comparison-item" id="thickness2">--</div>
+                </div>
+
+                <div class="comparison-row">
+                    <div class="comparison-category"><span class="spec-icon">🎨</span>Color Options</div>
+                    <div class="comparison-item" id="colors1">--</div>
+                    <div class="comparison-item" id="colors2">--</div>
+                </div>
+
+                <div class="comparison-row">
+                    <div class="comparison-category"><span class="spec-icon">🛡️</span>Warranty</div>
+                    <div class="comparison-item" id="warranty1">--</div>
+                    <div class="comparison-item" id="warranty2">--</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer Section -->
+    <footer id="footer">
+        <!-- Navbar content will be injected here by JavaScript -->
+    </footer>
+
+</body>
+<!-- Font Awesome Icons -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/js/all.min.js"
+    integrity="sha512-b+nQTCdtTBIRIbraqNEwsjB6UvL3UEMkXnhzd8awtCYh0Kcsjl9uEgwVFVbhoj3uu1DO1ZMacNvLoyJJiNfcvg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<!-- Link To JS -->
+<script src="js/navbar.js"></script>
+<script src="js/footer.js"></script>
+<script src="js/compare.js"></script>
+
+</html>

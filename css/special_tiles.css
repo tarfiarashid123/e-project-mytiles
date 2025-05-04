@@ -1,0 +1,421 @@
+        /* Special Tiles CSS */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f9f9f9;
+            color: var(--text);
+            line-height: 1.6;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+
+        /* Hero Section */
+        .hero {
+            height: 90vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+                url(../images/special_tiles_img1.jpg);
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            color: white;
+            text-align: center;
+            height: 500px;
+        }
+
+        .hero-content {
+            max-width: 800px;
+            padding: 0 20px;
+        }
+
+        .hero h1 {
+            font-size: 40px;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+            animation: fadeInUp 1s ease;
+        }
+
+        .hero p {
+            font-size: 20px;
+            margin-bottom: 30px;
+            animation: fadeInUp 1s ease 0.2s forwards;
+            opacity: 0;
+        }
+
+        /* Button */
+        .btn {
+            display: inline-block;
+            background: #e74c3c;
+            color: white;
+            padding: 15px 40px;
+            border: none;
+            border-radius: 50px;
+            font-size: 1rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            cursor: pointer;
+            transition: var(--transition);
+            text-decoration: none;
+            box-shadow: var(--shadow);
+            animation: fadeInUp 1s ease 0.4s forwards;
+            opacity: 0;
+        }
+
+        .btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+            background: #c0392b;
+        }
+
+        .explore-btn {
+            display: inline-block;
+            background: #e74c3c;
+            color: white;
+            padding: 15px 40px;
+            border: none;
+            border-radius: 50px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: var(--transition);
+            margin-top: 15px;
+            text-decoration: none;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .explore-btn:hover {
+            background: white;
+            color: #c0392b;
+            transform: translateY(-2px);
+        }
+
+        /* Category Sections */
+        .special-category {
+            padding: 60px 20px;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .category-header {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .category-title {
+            font-size: 32px;
+            color: #2c3e50;
+            margin-bottom: 15px;
+            position: relative;
+            display: inline-block;
+        }
+
+        .category-title:after {
+            content: '';
+            position: absolute;
+            width: 50%;
+            height: 3px;
+            background-color: #e74c3c;
+            bottom: -10px;
+            left: 25%;
+        }
+
+        .category-description {
+            font-size: 16px;
+            max-width: 700px;
+            margin: 0 auto;
+            color: #7f8c8d;
+        }
+
+        /* Tiles Grid */
+        .special-tiles-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        /* Tile Card */
+        .special-tile-card {
+            background: var(--light);
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        .special-tile-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+        }
+
+        .tile-badge {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            background-color: #2c3e50;
+            color: white;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: bold;
+            z-index: 2;
+        }
+
+        .special-tile-img {
+            height: 250px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .special-tile-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .special-tile-card:hover .special-tile-img img {
+            transform: scale(1.1);
+        }
+
+        .special-tile-info {
+            padding: 25px;
+        }
+
+        .special-tile-name {
+            font-size: 1.4rem;
+            margin-bottom: 10px;
+            color: #333;
+        }
+
+        .special-tile-price {
+            font-size: 1.3rem;
+            font-weight: bold;
+            color: #2a6496;
+            margin-bottom: 15px;
+        }
+
+        .special-tile-features {
+            margin-bottom: 20px;
+        }
+
+        .special-tile-features li {
+            margin-bottom: 8px;
+            list-style-type: none;
+            position: relative;
+            padding-left: 25px;
+        }
+
+        .special-tile-features li:before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: #666;
+            font-weight: bold;
+        }
+
+        .special-tile-btn {
+            display: inline-block;
+            padding: 12px 25px;
+            background-color: #e74c3c;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+            width: 100%;
+            text-align: center;
+        }
+
+        .special-tile-btn:hover {
+            background-color: #c0392b;
+            transform: translateY(-2px);
+        }
+
+
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Responsive CSS for Special Tiles */
+        @media (max-width: 1200px) {
+            .special-tiles-grid {
+                grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+                gap: 25px;
+            }
+
+            .special-tile-img {
+                height: 220px;
+            }
+
+            .special-tile-info {
+                padding: 20px;
+            }
+        }
+
+        @media (max-width: 992px) {
+            .hero h1 {
+                font-size: 36px;
+            }
+
+            .hero p {
+                font-size: 18px;
+            }
+
+            .category-title {
+                font-size: 28px;
+            }
+
+            .category-description {
+                font-size: 15px;
+            }
+
+            .btn {
+                padding: 12px 30px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .hero {
+                height: 400px;
+                background-attachment: scroll;
+            }
+
+            .hero h1 {
+                font-size: 32px;
+                margin-bottom: 15px;
+            }
+
+            .hero p {
+                font-size: 16px;
+                margin-bottom: 25px;
+            }
+
+            .special-category {
+                padding: 50px 15px;
+            }
+
+            .category-header {
+                margin-bottom: 40px;
+            }
+
+            .special-tiles-grid {
+                grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+                gap: 20px;
+            }
+
+            .special-tile-img {
+                height: 200px;
+            }
+
+            .special-tile-name {
+                font-size: 1.3rem;
+            }
+
+            .special-tile-price {
+                font-size: 1.2rem;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .hero {
+                height: 350px;
+            }
+
+            .hero h1 {
+                font-size: 28px;
+            }
+
+            .hero p {
+                font-size: 15px;
+            }
+
+            .btn {
+                padding: 10px 25px;
+                font-size: 0.9rem;
+            }
+
+            .category-title {
+                font-size: 24px;
+            }
+
+            .category-title:after {
+                height: 2px;
+                bottom: -8px;
+            }
+
+            .special-tiles-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .special-tile-img {
+                height: 180px;
+            }
+
+            .special-tile-info {
+                padding: 15px;
+            }
+
+            .special-tile-btn {
+                padding: 10px 20px;
+            }
+        }
+
+        @media (max-width: 400px) {
+            .hero h1 {
+                font-size: 24px;
+            }
+
+            .hero p {
+                font-size: 14px;
+            }
+
+            .btn {
+                padding: 8px 20px;
+                font-size: 0.8rem;
+            }
+
+            .category-title {
+                font-size: 22px;
+            }
+
+            .special-tile-name {
+                font-size: 1.2rem;
+            }
+
+            .special-tile-price {
+                font-size: 1.1rem;
+            }
+
+            .special-tile-features li {
+                font-size: 0.9rem;
+                padding-left: 20px;
+            }
+        }
